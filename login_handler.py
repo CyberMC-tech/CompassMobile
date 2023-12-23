@@ -6,6 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class LoginBackend:
     def __init__(self):
+					#TODO make webdriver run headless 
+					
         self.driver = webdriver.Firefox()
         self.driver.get("https://compassmobile.dollartree.com/")
         self.username_field = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.ID, "idUNField")))
